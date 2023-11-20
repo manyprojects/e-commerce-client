@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+e-commerce is a dynamic, responsive e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience.
 
-In the project directory, you can run:
+### Problem
 
-### `npm start`
+This site is created for my personal use in phase one. In phase two, when more features are added, this site will allow users to see product recommendations and more functionalities to allow users to navigate the web content because 
+many users currently face challenges when shopping online such as a lack of personalized recommendations, and difficulty navigating through extensive product catalogs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User Profile
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The website targets diverse users due to its responsiveness:
+- General shoppers
+- Mobile/tablet users
+- desktop users
+Users can go to the website, browse the website, and select the items that they want to purchase
 
-### `npm test`
+### Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. User registration: new users can create an account by providing a username,email, and password
 
-### `npm run build`
+2. User auth: registered users can log in to their accounts 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Product browsing: users can browse products easily. Filter by categories etc.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Product search: search a specific product by entering keywords to retrieve what they are looking for to purchase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Shopping cart: users can add products to the shopping cart for checkout
 
-### `npm run eject`
+6. Payment: users can checkout their products by entering payment methods
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+7. Responsive design: the website works from between different devices providing a seamless user experience
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8. Product recommendation: recommend products to registered user (nice to have in phase one)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+9. Website summary: providing a summary to users with website products, reviews, ratings, etc (nice to have in phase one).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Implementation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- VS Code, Chrome Web Dev tools
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Tech Stack
 
-### Code Splitting
+- Font end: HTML, Sass
+- Frameworks and Libraries: React, Axios, Knex(nice to have)
+- Back end: Node, Express, MySQL database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### APIs
 
-### Analyzing the Bundle Size
+- Own API with routes
+- Fake Store API
+- Stripe/Paypal API
+- OpenAI API (nice-to-have in phase one)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Sitemap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Homepage: displays a list of products, category list, user login/sign-up buttons
+- Product details page: displays details of a selected product and 
+- Sign up/ login page: allows user to sign up/log in
+- Logout page
+- User profile page: after users log in or sign up, displays user profile
+- log out page: displays a page when user log out from their accounts
+- Checkout page: allows users to make a payment
+- Error page
+- Loading page
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Mockups
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+### Data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MySQL database
+
+
+### Endpoints
+
+### Auth
+
+Auth in the first phase should be just a simple check when a user creates an account. It will check if users enter all required fields.
+
+Local/section storage and token authentication will be implemented in the second phase of development 
+
+
+## Roadmap
+
+1. Github repo setups: client and server
+2. Design a simplified version of phase one database schema in the back end 
+3. Test web apis data for this project
+4. Test Express server routes and my API endpoint requests wirh server
+5. Test Client react routes 
+6. Implement basic features for client pages 
+7. Styling
+
+## Nice-to-haves
+
+Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+
+- Use ChatGPT APIs
+- complete version of user auth
+
+
