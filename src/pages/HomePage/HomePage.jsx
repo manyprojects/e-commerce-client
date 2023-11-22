@@ -4,33 +4,17 @@ import axios from 'axios';
 import Card from '../../components/Card/Card'
 import './HomePage.scss';
 
-const HomePage = () => {
-    const SERVER_URL = process.env.REACT_APP_SERVER_URL;
-    const [ product, setProduct ] = useState([]);
+const HomePage = ( { updataCart, getProducts, filteredProducts } ) => {
 
-    useEffect(() => {
-        const fetchProductList = async () => {
-            try {
-                const productList  = await axios
-                .get(`${SERVER_URL}`);
-                setProduct(productList.data);
-            } catch(err) {
-                return (<p>{`HomePage: ${err.message}`} </p>);
-            }
-        }
-        fetchProductList();
-        // eslint-disable-next-line 
-    }, []);
-
-    if( !product ) {
+    if( filteredProducts.length === 0 ) {
         return (
-            <div>Loading items...</div>
+            <div>No matches...</div>
         );
     }
 
     return (
         <div className='home'>
-            {product.map((item) => {
+            {filteredProducts.map((item) => {
                 return (
                     <Card 
                         key={item.id}
@@ -42,6 +26,7 @@ const HomePage = () => {
                         image={item.image}
                         price={item.price}
                         title={item.title}
+                        updataCart={updataCart}
                     />
                 );
             })}
