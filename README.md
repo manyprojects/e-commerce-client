@@ -7,7 +7,7 @@ e-commerce is a dynamic, responsive e-commerce website built on React in the fon
 ### Problem
 
 This site is created for my personal use in phase one. In phase two, when more features are added, this site will allow users to see product recommendations and more functionalities to allow users to navigate the web content because 
-many users currently face challenges when shopping online such as a lack of personalized recommendations, and difficulty navigating through extensive product catalogs.
+many users currently face challenges when shopping online such as a lack of personalized recommendations, and difficulty navigating through extensive product catalogs. In phase three, the site should allow users to sell products by enabling sell features.
 
 ### User Profile
 

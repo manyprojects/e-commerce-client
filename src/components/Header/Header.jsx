@@ -2,9 +2,14 @@ import { NavLink } from "react-router-dom";
 import './Header.scss';
 
 
-const Header = ( { cartCount, handleSearch } ) => {
+const Header = ( { cartCount, handleSearch, isSignedIn, setIsSignedIn, user } ) => {
 
+    const handleSignOut = () => {
+        sessionStorage.removeItem('token');
+        setIsSignedIn(false);
+    }
 
+    
     return (
         <div>
             <nav className='nav'>
@@ -21,12 +26,12 @@ const Header = ( { cartCount, handleSearch } ) => {
                     </div>
                     
 
-                    <NavLink to='/signin' className='nav__about'>
+                    {isSignedIn ? <p className='nav__user'>{`${user.email}`}</p> : <NavLink to='/signin' className='nav__about'>
                         Sign in
-                    </NavLink>
-                    <NavLink to='/signup' className='nav__about'>
+                    </NavLink>}
+                    {isSignedIn ? <p onClick={handleSignOut}>Sign out</p> : <NavLink to='/signup' className='nav__about'>
                         Sign up
-                    </NavLink>
+                    </NavLink>}
                     <NavLink to='/cart' className='nav__about'>
                         Cart ({cartCount})
                     </NavLink>

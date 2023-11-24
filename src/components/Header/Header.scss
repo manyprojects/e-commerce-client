@@ -13,4 +13,11 @@
         display: flex;
     
     }
+
+    &__user {
+        width: 3.5rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }

@@ -5,15 +5,27 @@ import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import SignupPage from './pages/SignupPage/SignupPage';
+import SigninPage from './pages/SigninPage/SigninPage';
+import CartPage from './pages/CartPage/CartPage';
 import './styles/global.scss';
+
 
 function App() {
 
   const SERVER_URL = process.env.REACT_APP_SERVER_URL;
   const [ products, setProducts ] = useState([]);
   const [ count, setCount ] = useState(0);
-  const [ cartItem, setCartItem ] = useState([]);
+  const [ cartItems, setCartItems ] = useState([]);
   const [ filteredProducts, setFilteredProducts ] = useState([]);
+  const [ isSignedIn, setIsSignedIn ] = useState(false);
+  const [ user, setUser ] = useState({});
+
+  // check if token exists
+  useEffect(() => {
+    const token = sessionStorage.getItem('token');
+    // console.log(token);
+    setIsSignedIn(!!token);
+  }, []);
 
 
   useEffect(() => {
@@ -31,10 +43,17 @@ function App() {
     // eslint-disable-next-line 
   }, []);
 
-  const updataCart = (product) => {
+  const updataCart = (item) => {
     setCount(count + 1);
-    setCartItem(product);
+    setCartItems(( prevItems ) => [ ...prevItems, item ]);
   }
+
+  console.log(cartItems);
+
+  // const removeFromCart = (itemId) => {
+  //   setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  // };
+
 
   const handleSearch = (searched) => {
       const filteredItems = products.filter((product) => {
@@ -42,9 +61,6 @@ function App() {
       });
       setFilteredProducts(filteredItems);
   }
-
-  // console.log(cartItem);
-  // console.log(filteredProducts);
 
   if( !products ) {
     return (
@@ -59,21 +75,33 @@ function App() {
         <Header 
         cartCount={count} 
         handleSearch={handleSearch}
+        isSignedIn={isSignedIn}
+        setIsSignedIn={setIsSignedIn}
+        user={user}
         />
 
         <Routes>
           <Route path='/' element={<HomePage 
-            updataCart={ updataCart }
+            updataCart={updataCart}
           // getProducts={ getProducts }  
             filteredProducts={filteredProducts}
           />}/>
 
           <Route path='/products/:id' element={<ProductDetails 
-            updataCart={ updataCart }
+            updataCart={updataCart}
           />} />
 
           <Route path='/signup' element={<SignupPage
           
+          />} />
+
+          <Route path='/signin' element={<SigninPage
+            setIsSignedIn={setIsSignedIn}
+            setUser={setUser}
+          />} />
+
+          <Route path='/cart' element={<CartPage
+            
           />} />
 
         </Routes>
