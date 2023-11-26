@@ -1,63 +1,8 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
 import CartCard from '../../components/CartCard/CartCard';
 
-const CartPage = ({ cartItems, user, isSignedIn, deletFromCart }) => {
+const CartPage = ({ cartItems, deletFromCart }) => {
 
-    // console.log(user.email);
-    const SERVER_URL = process.env.REACT_APP_SERVER_URL;
-    const [ userDetails, setUserDetails ] = useState({});
-    const [ userItems, setUserItems ] = useState([]);
-
-    // const fetchCartItems = async () => {
-    //     try {
-    //         const data = await axios
-    //         .get(`${SERVER_URL}/cart/${userDetails.user_id}`);
-    //         setUserItems(data.data[0]);
-    //     } catch(err) {
-    //         return (<p>{`CartPage: ${err.message}`} </p>); 
-    //     }
-    // };
-
-    // const fetchUserDetails = async () => {
-    //     try {
-    //         const data  = await axios
-    //         .get(`${SERVER_URL}/${user.email}`);
-    //         setUserDetails(data.data[0]);
-
-    //         const fetchCartItems = async () => {
-    //             try {
-    //                 const data = await axios
-    //                 .get(`${SERVER_URL}/cart/${userDetails.user_id}`);
-    //                 setUserItems(data.data[0]);
-    //             } catch(err) {
-    //                 return (<p>{`CartPage: ${err.message}`} </p>); 
-    //             }
-    //         };
-    //         fetchCartItems();
-
-    //     } catch(err) {
-    //         return (<p>{`CartPage: ${err.message}`} </p>);
-    //     }
-    // };
-
-
-
-    // useEffect(() => {
-    //     fetchUserDetails();
-    // }, [ isSignedIn ]);
-
-    // useEffect(() => {
-    //     fetchCartItems();
-    // }, [ userDetails ]);
-
-
-    // console.log(userItems);
-
-
-
-
-    
+    const subTotal = cartItems.reduce((sum, item) => (sum + parseFloat(item.price)), 0);
     return (
         <div className='cart'>
             {cartItems.map((item) => {
@@ -76,6 +21,12 @@ const CartPage = ({ cartItems, user, isSignedIn, deletFromCart }) => {
                     />
                 );
             })}
+            <hr />
+            <section className='cart__total'>
+                <p>Total</p>
+                <p>{`C$${subTotal}`}</p>
+            </section>
+            <button>Proceed to checkout</button>
         </div>
     );
 };
