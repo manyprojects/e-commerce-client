@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const SignupPage = ({ setIsSignedIn, setUser }) => {
+const SignupPage = ({ setIsSignedIn, setUser, upDateCart }) => {
 
     const navigate = useNavigate();
     const SERVER_URL = process.env.REACT_APP_SERVER_URL;
@@ -30,15 +30,14 @@ const SignupPage = ({ setIsSignedIn, setUser }) => {
         try {
             const { data } = await axios.post(`${SERVER_URL}/signin`, user);
             sessionStorage.setItem( 'token', data.token );
-            setIsSignedIn(true);
-            setUser(user);
+            setIsSignedIn( true );
+            setUser( user );
             setTimeout (() => {
                 navigate("/");
             }, 1000);
           } catch (err) {
             console.log(err);
         }
-
     };
 
     return (

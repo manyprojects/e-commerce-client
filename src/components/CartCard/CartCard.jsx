@@ -14,10 +14,10 @@ const Card = ( props ) => {
         image,
         rate,
         count,
-        addToCart
+        deletFromCart
     } = props;
 
-    const handleItemClick = () => {
+    const handleDelete = () => {
         const product = {
             id: id,
             title: title,
@@ -28,11 +28,11 @@ const Card = ( props ) => {
             rate: rate,
             count: count
         }
-        addToCart(product);
+        deletFromCart(product);
     }
 
     const handleCardClick = (e) => {
-        console.log(e);
+        // console.log(e);
         navigate(`/products/${id}`);
     }
     
@@ -45,7 +45,7 @@ const Card = ( props ) => {
                     <p>{`$${price}`}</p>
                 </section>
             </div>
-            <button onClick={handleItemClick}>Add to cart</button>
+            <button onClick={handleDelete}>Delete</button>
         </div>
     );
 };

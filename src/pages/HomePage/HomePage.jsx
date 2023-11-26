@@ -4,7 +4,7 @@ import axios from 'axios';
 import Card from '../../components/Card/Card'
 import './HomePage.scss';
 
-const HomePage = ( { updataCart, getProducts, filteredProducts } ) => {
+const HomePage = ( { addToCart, filteredProducts } ) => {
 
     if( filteredProducts.length === 0 ) {
         return (
@@ -26,7 +26,7 @@ const HomePage = ( { updataCart, getProducts, filteredProducts } ) => {
                         image={item.image}
                         price={item.price}
                         title={item.title}
-                        updataCart={updataCart}
+                        addToCart={addToCart}
                     />
                 );
             })}

@@ -1,8 +1,8 @@
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const ProductDetails = ({ updataCart }) => {
+const ProductDetails = ({ addToCart }) => {
     // get product id
     const { id } = useParams();
     const SERVER_URL = process.env.REACT_APP_SERVER_URL;
@@ -21,11 +21,9 @@ const ProductDetails = ({ updataCart }) => {
         fetchProductDetails();
         // eslint-disable-next-line 
     }, []);
-    
-    // console.log(productDetails);
 
     const handleItemClick = () => {
-        updataCart(productDetails);
+        addToCart(productDetails);
     }
 
     return (

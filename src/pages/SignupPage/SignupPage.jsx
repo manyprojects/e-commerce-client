@@ -34,7 +34,6 @@ const SignupPage = () => {
           } catch (err) {
             console.log(err);
         }
-
     };
 
     return (
@@ -42,11 +41,11 @@ const SignupPage = () => {
             <h1>Sign Up</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='userName'>User Name</label>
-                <input type='text' name='userName' value={formData.userName} onChange={handleChange} /> <br />
+                <input type='text' name='userName' id ='userName' value={formData.userName} onChange={handleChange} /> <br />
                 <label htmlFor='email'>Email</label>
-                <input type='text' name='email' value={formData.email} onChange={handleChange} /> <br />
+                <input type='text' name='email' id='email' value={formData.email} onChange={handleChange} /> <br />
                 <label htmlFor='password'>Password</label>
-                <input type='text' name='password' value={formData.password} onChange={handleChange} /> <br />
+                <input type='text' name='password' id='password' value={formData.password} onChange={handleChange} /> <br />
                 <button type='submit'>Sign Up</button>
                 {isSignup ? <p>Thank you for signing up!</p> : <></>}
             </form>

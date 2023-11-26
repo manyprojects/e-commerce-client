@@ -1,12 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './Header.scss';
 
 
 const Header = ( { cartCount, handleSearch, isSignedIn, setIsSignedIn, user } ) => {
 
+    const navigate = useNavigate();
     const handleSignOut = () => {
         sessionStorage.removeItem('token');
         setIsSignedIn(false);
+        navigate("/");
     }
 
     
