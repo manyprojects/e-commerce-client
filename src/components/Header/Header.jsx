@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import './Header.scss';
+import cart from '../../assets/icons/cart.svg';
 
 
 const Header = ( { cartCount, handleSearch, isSignedIn, setIsSignedIn, user } ) => {
@@ -16,29 +17,32 @@ const Header = ( { cartCount, handleSearch, isSignedIn, setIsSignedIn, user } ) 
     return (
         <div>
             <nav className='nav'>
-                <NavLink to='/' className='nav__logo'>
-                    <img className='nav__image' src alt='company logo' />
-                </NavLink>
-                <div className='nav__div'>
-                    <NavLink to='/' className='nav__about'>
-                        Home
-                    </NavLink>
+                    <section className='nav__status'>
 
-                    <div>
-                        <input type='text' placeholder='Search' onChange={(e) => handleSearch(e.target.value)} />
-                    </div>
-                    
+                        <section className='nav__account'>
+                            {isSignedIn ? <p className='nav__user'>{`Welcome, ${user.email}`}</p> : <NavLink to='/signin' className='nav__about'>
+                                Sign in
+                            </NavLink>}
+                            {isSignedIn ? <button className='nav__signout' onClick={handleSignOut}>Sign out</button> : <NavLink to='/signup' className='nav__about'>
+                                Sign up
+                            </NavLink>}
+                        </section>
 
-                    {isSignedIn ? <p className='nav__user'>{`${user.email}`}</p> : <NavLink to='/signin' className='nav__about'>
-                        Sign in
-                    </NavLink>}
-                    {isSignedIn ? <p onClick={handleSignOut}>Sign out</p> : <NavLink to='/signup' className='nav__about'>
-                        Sign up
-                    </NavLink>}
-                    <NavLink to='/cart' className='nav__about'>
-                        Cart ({cartCount})
-                    </NavLink>
-                </div>
+                        <NavLink to='/cart' className='nav__cart'>
+                            <div className='nav__cart-count'>{cartCount}</div>
+                            <img className='nav__cart-img' src={cart} alt='cart' />
+                        </NavLink>
+                    </section>
+
+                    <section className='nav__brand'>
+                        <NavLink to='/' className='nav__logo'>
+                            E-COMMERCE
+                        </NavLink>
+
+                        <div className='nav__search'>
+                            <input className='nav__input' type='text' placeholder='Search' onChange={(e) => handleSearch(e.target.value)} />
+                        </div>
+                    </section>
             </nav>
         </div>
     );

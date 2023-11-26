@@ -1,6 +1,21 @@
+// break-points
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
+$min-width: 290px;
+$max-width: 1280px;
 
+// gaps
 $mobile-padding: 1rem;
 $tablet-padding: 2.25rem;
 $desktop-padding: 7rem;
+
+// font sizes
+$mobile-font: 0.75rem;
+$tablet-font: 0.85rem;
+$desktop-font: 1.25rem;
+
+// colors
+$primary-cart: #E38C34;
+$primary-logo: #141A21;
+$primary-hover: #BFBFBF;
+$primary-font: #FFFFFF;

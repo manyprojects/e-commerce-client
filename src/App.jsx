@@ -57,7 +57,7 @@ function App() {
               id: cartItems[cartItems.length-1].id,
               quantity: 1
             }
-            const itemsNumber  = await axios
+            await axios
             .post(`${SERVER_URL}/insertItems`, insertItem);
           }
         } catch(err) {
@@ -65,6 +65,7 @@ function App() {
         }
     }
     sendItems();
+    // eslint-disable-next-line 
   }, [ count ]);
 
 
@@ -80,6 +81,7 @@ function App() {
         }
     }
     deleteItem();
+    // eslint-disable-next-line 
   }, [ deleteCount ]);
 
 
@@ -116,6 +118,7 @@ function App() {
       }
     };
     fetchCartItems();
+    // eslint-disable-next-line 
   }, [ user ]);
 
   useEffect(() => {
@@ -131,6 +134,7 @@ function App() {
       }
     };
     fetchUser();
+    // eslint-disable-next-line 
   }, [ user ]);
 
   // after users sign in, update cart items
@@ -138,6 +142,7 @@ function App() {
     if( userItems.length !== 0 ) {
       upDateCart();
     }
+    // eslint-disable-next-line 
   }, [ userItems ]);
 
   // console.log([ ...userItems, ...cartItems ]);

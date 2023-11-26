@@ -1,6 +1,3 @@
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import Card from '../../components/Card/Card'
 import './HomePage.scss';
 

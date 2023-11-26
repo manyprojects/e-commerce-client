@@ -2,7 +2,10 @@ import CartCard from '../../components/CartCard/CartCard';
 
 const CartPage = ({ cartItems, deletFromCart }) => {
 
-    const subTotal = cartItems.reduce((sum, item) => (sum + parseFloat(item.price)), 0);
+    const subTotal = cartItems.reduce((sum, item) => (
+        sum + parseFloat(item.price)), 0)
+        .toFixed(2);
+
     return (
         <div className='cart'>
             {cartItems.map((item) => {
