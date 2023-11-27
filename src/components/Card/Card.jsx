@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import '../Card/Card.scss';
+import './Card.scss';
 
 const Card = ( props ) => {
 
@@ -45,7 +45,7 @@ const Card = ( props ) => {
                     <p>{`$${price}`}</p>
                 </section>
             </div>
-            <button onClick={handleItemClick}>Add to cart</button>
+            <button className='card__btn' onClick={handleItemClick}>Add to cart</button>
         </div>
     );
 };

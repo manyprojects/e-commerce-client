@@ -1,0 +1,51 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles//partials/mixins' as *;
+
+.cart-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 $mobile-padding 0 $mobile-padding; 
+    min-width: $min-width;
+    max-width: $max-width;
+
+    @include tablet {
+        padding: 0 $tablet-padding 0 $tablet-padding;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        padding: 0 $desktop-padding 0 $desktop-padding;
+    }
+
+    &__divider {
+        margin: 0.5rem 0;
+        border: 0.5px solid $primary-hover;
+    }
+
+    &__total {
+        width: 40%;
+    }
+
+    &__btn {
+        border: 1px solid rgba(191, 191, 191, 0.2);
+        border-radius: 4px;
+        background-color: $primary-cart;
+        color: $primary-logo;
+        margin-bottom: 0.5rem;
+        padding: 0.1rem 0.75rem;
+        width: 15rem;
+
+        &:hover {
+            background-color: rgb(212, 126, 27);
+        }
+    }
+}

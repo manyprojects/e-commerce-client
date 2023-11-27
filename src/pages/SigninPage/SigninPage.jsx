@@ -1,6 +1,7 @@
 import { useState } from 'react'; 
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './SignInPage.scss'
 
 const SignupPage = ({ setIsSignedIn, setUser, upDateCart }) => {
 
@@ -41,16 +42,24 @@ const SignupPage = ({ setIsSignedIn, setUser, upDateCart }) => {
     };
 
     return (
-        <div>
-            <h1>Sign In</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor='email'>Email</label>
-                <input type='text' name='email' id='email' value={formData.email} onChange={handleChange} /> <br />
-                <label htmlFor='password'>Password</label>
-                <input type='text' name='password' id='password' value={formData.password} onChange={handleChange} /> <br />
-                <button type='submit'>Sign In</button>
-            </form>
+        <div className='signin'>
+            <div className='signin__div'>
+                <h1 className='signin__title'>Sign In</h1>
+                <form onSubmit={handleSubmit}>
 
+                    <div className='signin__email'>
+                        <label className='signin__label-e' htmlFor='email'>Email</label>
+                        <input className='signin__input-e' type='text' name='email' id='email' value={formData.email} onChange={handleChange} />
+                    </div>
+
+                    <div className='signin__password'>
+                        <label className='signin__label-p' htmlFor='password'>Password</label>
+                        <input className='signin__input-p' type='text' name='password' id='password' value={formData.password} onChange={handleChange} />
+                    </div>
+
+                    <button className='signin__btn' type='submit'>Sign In</button>
+                </form>
+            </div>
         </div>
     );
 };

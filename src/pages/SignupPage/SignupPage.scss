@@ -1,0 +1,128 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.signup {
+    margin-top: 4rem;
+    width: 100%;
+    padding: 0 $mobile-padding 0 $mobile-padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    gap: $mobile-padding;
+    align-items: center;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    &__name {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__email {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__password {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__label-n {
+        font-weight: 300;
+        font-size: 0.85rem;
+    }
+
+    &__label-e {
+        font-weight: 300;
+        font-size: 0.85rem;
+    }
+
+    &__label-p {
+        font-weight: 300;
+        font-size: 0.85rem;
+    }
+
+    &__input-n {
+        font-weight: 300;
+        padding: 0 0.5rem;
+        height: 1.5rem;
+        border-radius: 4px;
+        border: 1px solid $primary-hover;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $primary-cart;
+            border-radius: 4px;
+        }
+
+        @include tablet {
+            height: 2rem;
+        }
+    }
+
+    &__input-e {
+        font-weight: 300;
+        padding: 0 0.5rem;
+        height: 1.5rem;
+        border-radius: 4px;
+        border: 1px solid $primary-hover;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $primary-cart;
+            border-radius: 4px;
+        }
+
+        @include tablet {
+            height: 2rem;
+        }
+    }
+
+    &__input-p {
+        font-weight: 300;
+        padding: 0 0.5rem;
+        height: 1.5rem;
+        border-radius: 4px;
+        border: 1px solid $primary-hover;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $primary-cart;
+            border-radius: 4px;
+        }
+
+        @include tablet {
+            height: 2rem;
+        }
+    }
+
+    &__btn {
+        margin: 0.5rem 0;
+        border: 1px solid rgba(191, 191, 191, 0.2);
+        border-radius: 4px;
+        background-color: $primary-cart;
+        color: $primary-logo;
+        margin-bottom: 0.5rem;
+        padding: 0.1rem 0.75rem;
+        width: 15rem;
+
+        &:hover {
+            background-color: rgb(212, 126, 27);
+        }
+
+        @include tablet {
+            height: 2rem;
+            font-size: 1rem;
+        }
+    }
+}

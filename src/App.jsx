@@ -11,7 +11,6 @@ import './styles/global.scss';
 
 
 function App() {
-
   const SERVER_URL = process.env.REACT_APP_SERVER_URL;
   const [ products, setProducts ] = useState([]);
   const [ count, setCount ] = useState(0);
@@ -145,12 +144,6 @@ function App() {
     // eslint-disable-next-line 
   }, [ userItems ]);
 
-  // console.log([ ...userItems, ...cartItems ]);
-  // console.log(newCount);
-  // console.log(newCount);
-  // console.log(cartItems[cartItems.length-1]);
-  // console.log(userItems);
-
   // when there's search input from header
   const handleSearch = (searched) => {
       const filteredItems = products.filter((product) => {
@@ -167,14 +160,14 @@ function App() {
 
 
   return (
-    <div>
-      <BrowserRouter>
-        <Header 
-        cartCount={count + newCount} 
-        handleSearch={handleSearch}
-        isSignedIn={isSignedIn}
-        setIsSignedIn={setIsSignedIn}
-        user={user}
+    <div className='app'>
+      <BrowserRouter className='app__components'>
+        <Header className='app__header'
+          cartCount={count + newCount} 
+          handleSearch={handleSearch}
+          isSignedIn={isSignedIn}
+          setIsSignedIn={setIsSignedIn}
+          user={user}
         />
 
         <Routes>

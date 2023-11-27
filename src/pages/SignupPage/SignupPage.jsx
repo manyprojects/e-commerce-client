@@ -1,5 +1,6 @@
 import { useState } from 'react'; 
 import axios from 'axios';
+import './SignupPage.scss';
 
 const SignupPage = () => {
 
@@ -37,19 +38,28 @@ const SignupPage = () => {
     };
 
     return (
-        <div>
-            <h1>Sign Up</h1>
+        <div className='signup'>
+            <h1 className='signup__title'>Sign Up</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor='userName'>User Name</label>
-                <input type='text' name='userName' id ='userName' value={formData.userName} onChange={handleChange} /> <br />
-                <label htmlFor='email'>Email</label>
-                <input type='text' name='email' id='email' value={formData.email} onChange={handleChange} /> <br />
-                <label htmlFor='password'>Password</label>
-                <input type='text' name='password' id='password' value={formData.password} onChange={handleChange} /> <br />
-                <button type='submit'>Sign Up</button>
+
+                <div className='signup__name'>
+                    <label className='signup__label-n' htmlFor='userName'>User Name</label>
+                    <input className='signup__input-n' type='text' name='userName' id ='userName' value={formData.userName} onChange={handleChange} />
+                </div>
+
+                <div className='signup__email'>
+                    <label className='signup__label-e' htmlFor='email'>Email</label>
+                    <input className='signup__input-e' type='text' name='email' id='email' value={formData.email} onChange={handleChange} />
+                </div>
+
+                <div className='signup__password'>
+                    <label className='signin__label-p' htmlFor='password'>Password</label>
+                    <input className='signup__input-p' type='text' name='password' id='password' value={formData.password} onChange={handleChange} />
+                </div>
+                
+                <button className='signup__btn' type='submit'>Sign Up</button>
                 {isSignup ? <p>Thank you for signing up!</p> : <></>}
             </form>
-
         </div>
     );
 };

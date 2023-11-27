@@ -1,8 +1,47 @@
-.home {
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
-    // background-color: yellowgreen;
+
+.home {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem
+    justify-content: center;
+    
+    &__div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 $mobile-padding 0 $mobile-padding;
+        min-width: $min-width;
+        max-width: $max-width;
+
+        @include tablet {
+            padding: 0 $tablet-padding 0 $tablet-padding;
+        }
+
+        @include desktop {
+            padding: 0 $desktop-padding 0 $desktop-padding;
+        }
+    }
+}
+
+.no-match {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__div {
+        padding: 0 $mobile-padding 0 $mobile-padding;
+        
+        @include tablet {
+            padding: 0 $tablet-padding 0 $tablet-padding;
+        }
+
+        @include desktop {
+            padding: 0 $desktop-padding 0 $desktop-padding;
+        }
+    }
 }

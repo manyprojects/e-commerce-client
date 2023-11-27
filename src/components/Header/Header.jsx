@@ -13,17 +13,20 @@ const Header = ( { cartCount, handleSearch, isSignedIn, setIsSignedIn, user } ) 
         navigate("/");
     }
 
-    
     return (
-        <div>
+        <div className='header'>
             <nav className='nav'>
                     <section className='nav__status'>
-
                         <section className='nav__account'>
-                            {isSignedIn ? <p className='nav__user'>{`Welcome, ${user.email}`}</p> : <NavLink to='/signin' className='nav__about'>
+                            {isSignedIn ? 
+                            <p className='nav__user'>{`Welcome, ${user.email}`}</p>
+                             : <NavLink to='/signin' className='nav__about'>
                                 Sign in
                             </NavLink>}
-                            {isSignedIn ? <button className='nav__signout' onClick={handleSignOut}>Sign out</button> : <NavLink to='/signup' className='nav__about'>
+
+                            {isSignedIn ? 
+                            <button className='nav__signout' onClick={handleSignOut}>Sign out</button>
+                             : <NavLink to='/signup' className='nav__about'>
                                 Sign up
                             </NavLink>}
                         </section>
