@@ -23,6 +23,7 @@ function App() {
   const [ newCount, setNewCount ] = useState(0);
   const [ userDetails, setUserDetails ] = useState({});
   const [ deleteCount, setDeleteCount ] = useState('');
+  const [ dCount, setDCount ] = useState(0);
 
   // check if token exists
   useEffect(() => {
@@ -93,9 +94,9 @@ function App() {
 
   // when users delete item from cart
   const deletFromCart = (item) => {
-    setCount( count - 1 );
     setCartItems(cartItems.filter(cartItem => cartItem.id !== item.id));
     setDeleteCount( item.id );
+    setDCount( dCount - 1 ); 
   };
 
   // updates cart after users sign in
@@ -165,7 +166,7 @@ function App() {
       <BrowserRouter className='app__components'>
 
         <Header
-          cartCount={count + newCount} 
+          cartCount={count + newCount + dCount} 
           handleSearch={handleSearch}
           isSignedIn={isSignedIn}
           setIsSignedIn={setIsSignedIn}
