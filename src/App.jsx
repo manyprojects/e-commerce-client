@@ -7,6 +7,7 @@ import ProductDetails from './pages/ProductDetails/ProductDetails';
 import SignupPage from './pages/SignupPage/SignupPage';
 import SigninPage from './pages/SigninPage/SigninPage';
 import CartPage from './pages/CartPage/CartPage';
+import Footer from './components/Footer/Footer';
 import './styles/global.scss';
 
 
@@ -162,7 +163,8 @@ function App() {
   return (
     <div className='app'>
       <BrowserRouter className='app__components'>
-        <Header className='app__header'
+
+        <Header
           cartCount={count + newCount} 
           handleSearch={handleSearch}
           isSignedIn={isSignedIn}
@@ -199,7 +201,8 @@ function App() {
           />} />
 
         </Routes>
-
+        
+        <Footer />
       </BrowserRouter>
     </div>
   );
