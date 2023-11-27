@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import './ProductDetails.scss';
 
 const ProductDetails = ({ addToCart }) => {
-    // get product id
     const { id } = useParams();
     const SERVER_URL = process.env.REACT_APP_SERVER_URL;
     const [ productDetails, setProductDetails ] = useState([]);
@@ -27,13 +27,15 @@ const ProductDetails = ({ addToCart }) => {
     }
 
     return (
-        <div>
-            <p>{`${productDetails.title}`}</p>
-            <img src={`${productDetails.image}`} alt='product' />
-            <article>{`${productDetails.description}`}</article>
-            <p>{`Rating: ${productDetails.rate}/5`}</p>
-            <p>{`Count: [ ${productDetails.count} ]`}</p>
-            <button onClick={handleItemClick}>Add to cart</button>
+        <div className="center">
+            <div className="details">
+                <p className="details__title">{`${productDetails.title}`}</p>
+                <img className='details__image' src={`${productDetails.image}`} alt='product' />
+                <article className='details__description'>{`${productDetails.description}`}</article>
+                <p className='details__rating'>{`Rating: ${productDetails.rate}/5`}</p>
+                <p className='details__quantity'>{`Quantity: [ ${productDetails.count} ]`}</p>
+                <button className='details__btn' onClick={handleItemClick}>Add to cart</button>
+            </div>
         </div>
     );
 };

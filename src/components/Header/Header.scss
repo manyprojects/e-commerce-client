@@ -185,6 +185,12 @@
         font-weight: 300;
         width: 100%;
 
+        background-image: url('../../assets/icons/search.svg');
+        background-position: 95% 50%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: 1rem;
+
         &:focus {
             outline: none;
         }
@@ -196,10 +202,12 @@
 
         @include tablet {
             height: 1.5rem;
+            background-size: 1.25rem;
         }
 
         @include desktop {
             height: 1.75rem;
+            background-size: 1.5rem;
         }
     }
 }

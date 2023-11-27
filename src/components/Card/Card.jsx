@@ -32,7 +32,6 @@ const Card = ( props ) => {
     }
 
     const handleCardClick = (e) => {
-        console.log(e);
         navigate(`/products/${id}`);
     }
     

@@ -1,0 +1,111 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: $min-width;
+    max-width: $max-width;
+    padding: 0 $mobile-padding;
+
+    @include tablet {
+        padding: 0 $tablet-padding;
+    }
+
+    @include desktop {
+        padding: 0 $desktop-padding;
+    }
+
+    &__title {
+        width: 55%;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        @include desktop {
+            font-size: $desktop-font;
+        }
+    }
+
+    &__image {
+        width: 55%;
+        
+        @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__description {
+        width: 55%;
+        font-size: $mobile-font;
+        font-weight: 300;
+
+        @include tablet {
+            font-size: $tablet-font;
+        }
+
+        @include desktop {
+            margin-top: 1rem;
+            font-size: $desktop-font;
+        }
+    }
+
+    &__rating {
+        font-size: $mobile-font;
+        font-weight: 300;
+        margin: 0.5rem 0;
+
+        @include tablet {
+            font-size: $tablet-font;
+        }
+
+        @include desktop {
+            font-size: $desktop-font;
+        }
+    }
+
+    &__quantity {
+        font-size: $mobile-font;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+
+        @include tablet {
+            font-size: $tablet-font;
+        }
+
+        @include desktop {
+            font-size: $desktop-font;
+        }
+    }
+
+    &__btn {
+        border: 1px solid rgba(191, 191, 191, 0.2);
+        border-radius: 4px;
+        width: 10rem;
+
+        &:hover {
+            background-color: $primary-cart;
+        }
+
+        @include tablet {
+            font-size: $tablet-font;
+            height: 1.5rem;
+            width: 12rem;
+        }
+
+        @include desktop {
+            font-size: $desktop-font;
+            height: 1.75rem;
+            width: 15rem;
+        }
+    }
+}
