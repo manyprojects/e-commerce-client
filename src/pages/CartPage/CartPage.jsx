@@ -60,14 +60,13 @@ const CartPage = ({ cartItems, deletFromCart, stripeProducts }) => {
                     })}
                     <hr className='cart__divider' />
                 </div>
+                
                 <section className='cart__total'>
                     <p>Total</p>
                     <hr className='cart__divider' />
                     <p>{`$${subTotal}`}</p>
                     <hr className='cart__divider' />
-
                     <button onClick={checkout} className='cart__btn'>Proceed to checkout</button>
-
                 </section>
             </div>
         </div>

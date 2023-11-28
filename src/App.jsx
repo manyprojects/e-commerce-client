@@ -115,11 +115,13 @@ function App() {
     setDCount( dCount - 1 ); 
   };
 
+
   // updates cart after users sign in
   const upDateCart = () => {
     setNewCount( newCount + userItems.length );
     setCartItems(( prevItems ) => [ ...prevItems, ...userItems ]);
   };
+
 
   // fetch cart items after user sign in
   useEffect(() => {
@@ -138,6 +140,7 @@ function App() {
     // eslint-disable-next-line 
   }, [ user ]);
 
+
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -154,6 +157,7 @@ function App() {
     // eslint-disable-next-line 
   }, [ user ]);
 
+
   // after users sign in, update cart items
   useEffect(() => {
     if( userItems.length !== 0 ) {
@@ -161,6 +165,7 @@ function App() {
     }
     // eslint-disable-next-line 
   }, [ userItems ]);
+
 
   // when there's search input from header
   const handleSearch = (searched) => {
@@ -170,6 +175,7 @@ function App() {
       setFilteredProducts(filteredItems);
   };
 
+  
   if( !products ) {
     return (
         <div>Loading items...</div>
