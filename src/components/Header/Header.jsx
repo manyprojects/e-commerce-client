@@ -19,7 +19,7 @@ const Header = ( { cartCount, handleSearch, isSignedIn, setIsSignedIn, user } ) 
                     <section className='nav__status'>
                         <section className='nav__account'>
                             {isSignedIn ? 
-                            <p className='nav__user'>{`Welcome, ${user.email}`}</p>
+                            <p className='nav__user'>{`Hi, ${user.email}`}</p>
                              : <NavLink to='/signin' className='nav__about'>
                                 Sign in
                             </NavLink>}

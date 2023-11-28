@@ -1,0 +1,22 @@
+export const stripeData = [
+    'price_1OHGxSA8stJgQqmOrhxMtvxS',
+    'price_1OHGygA8stJgQqmO5AlbyGXE',
+    'price_1OHGzNA8stJgQqmOvMUCn51v',
+    'price_1OHH06A8stJgQqmO0IvZLPPc',
+    'price_1OHH0nA8stJgQqmOS5YAnhuR',
+    'price_1OHH1NA8stJgQqmOJqzbVB6P',
+    'price_1OHH20A8stJgQqmOiuIaqlXI',
+    'price_1OHH2pA8stJgQqmOeDvmXIpc',
+    'price_1OHH3MA8stJgQqmOnRRxuJGV',
+    'price_1OHH4IA8stJgQqmO33xS2ufU',
+    'price_1OHH4wA8stJgQqmObLDuq3vv',
+    'price_1OHH5jA8stJgQqmOIJSDZvGq',
+    'price_1OHH6UA8stJgQqmOz6A12zEN',
+    'price_1OHH7AA8stJgQqmOEEFK8NT6',
+    'price_1OHH7lA8stJgQqmOtbcN6ygf',
+    'price_1OHH8OA8stJgQqmOe0ExvAO2',
+    'price_1OHH94A8stJgQqmO6wob7VbY',
+    'price_1OHH9hA8stJgQqmOdoNyjXcC',
+    'price_1OHHAbA8stJgQqmOCZCbVb58',
+    'price_1OHHBAA8stJgQqmObxO7WJTg'
+]

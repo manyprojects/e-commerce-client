@@ -8,6 +8,7 @@ import SignupPage from './pages/SignupPage/SignupPage';
 import SigninPage from './pages/SigninPage/SigninPage';
 import CartPage from './pages/CartPage/CartPage';
 import Footer from './components/Footer/Footer';
+import { stripeData } from './utils/data';
 import './styles/global.scss';
 
 
@@ -24,6 +25,8 @@ function App() {
   const [ userDetails, setUserDetails ] = useState({});
   const [ deleteCount, setDeleteCount ] = useState('');
   const [ dCount, setDCount ] = useState(0);
+  const [ stripeProducts, setStripeProducts ] = useState([]);
+
 
   // check if token exists
   useEffect(() => {
@@ -47,6 +50,17 @@ function App() {
     fetchProductList();
     // eslint-disable-next-line 
   }, []);
+
+
+  useEffect(() => {
+    // deep copy of products array
+    const stripeProductList = JSON.parse(JSON.stringify(products));
+    for (let i = 0; i < stripeProductList.length; i++) {
+      stripeProductList[i].id = stripeData[i];
+    }
+    setStripeProducts(stripeProductList);
+  }, [ products ]);
+
 
   // send add-to-cart item to database if users signed in
   useEffect(() => {
@@ -199,6 +213,7 @@ function App() {
             user={user}
             isSignedIn={isSignedIn}
             deletFromCart={deletFromCart}
+            stripeProducts={stripeProducts}
           />} />
 
         </Routes>
