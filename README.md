@@ -2,7 +2,7 @@
 
 ## Overview
 
-e-commerce is a dynamic, responsive e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience.
+E-COMMERCE is a dynamic, responsive e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience.
 
 ## Project Screenshots
 ![Screenshot 1](./screenshots/localhost_3000_2.png)
