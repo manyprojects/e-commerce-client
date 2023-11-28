@@ -8,6 +8,8 @@ import SignupPage from './pages/SignupPage/SignupPage';
 import SigninPage from './pages/SigninPage/SigninPage';
 import CartPage from './pages/CartPage/CartPage';
 import Footer from './components/Footer/Footer';
+import Success from './pages/SuccessPage/Success';
+import Cancel from './pages/CancelPage/Cancel';
 import { stripeData } from './utils/data';
 import './styles/global.scss';
 
@@ -214,6 +216,14 @@ function App() {
             isSignedIn={isSignedIn}
             deletFromCart={deletFromCart}
             stripeProducts={stripeProducts}
+          />} />
+
+          <Route path='/success' element={<Success
+            
+          />} />
+
+          <Route path='/cancel' element={<Cancel
+          
           />} />
 
         </Routes>
