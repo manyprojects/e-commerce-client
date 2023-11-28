@@ -4,6 +4,17 @@
 
 e-commerce is a dynamic, responsive e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience.
 
+## Project Screenshots
+![Screenshot 1](./screenshots/localhost_3000_2.png)
+
+![Screenshot 1](./screenshots/localhost_3000_.png)
+
+![Screenshot 1](./screenshots/localhost_3000_3.png)
+
+![Screenshot 1](./screenshots/localhost_3000_4.png)
+
+![Screenshot 1](./screenshots/checkout.stripe.com_c_pay_cs_test_b1Iy4k7jcPycSwshrdAuQOc6UwZsnGbcOQThFQhuTkC45Ol0zDDcI6VdTI.png)
+
 ### Problem
 
 This site is created for my personal use in phase one. In phase two, when more features are added, this site will allow users to see product recommendations and more functionalities to allow users to navigate the web content because 
@@ -21,7 +32,7 @@ Users can go to the website, browse the website, and select the items that they 
 
 1. User registration: new users can create an account by providing a username,email, and password
 
-2. User auth: registered users can log in to their accounts 
+2. User auth: registered users can log in to their accounts with JWT authentication
 
 3. Product browsing: users can browse products easily. Filter by categories etc.
 
@@ -33,9 +44,9 @@ Users can go to the website, browse the website, and select the items that they 
 
 7. Responsive design: the website works from between different devices providing a seamless user experience
 
-8. Product recommendation: recommend products to registered user (nice to have in phase one)
+8. Product recommendation: recommend products to registered user (will be added in development phase 2)
 
-9. Website summary: providing a summary to users with website products, reviews, ratings, etc (nice to have in phase one).
+9. Website summary: providing a summary to users with website products, reviews, ratings, etc (will be added in development phase 2).
 
 
 ## Implementation
@@ -71,8 +82,6 @@ Users can go to the website, browse the website, and select the items that they 
 
 ### Mockups
 
-
-
 ### Data
 
 MySQL database
@@ -84,7 +93,7 @@ MySQL database
 
 Auth in the first phase should be just a simple check when a user creates an account. It will check if users enter all required fields.
 
-Local/section storage and token authentication will be implemented in the second phase of development 
+Local/section storage and token authentication will be implemented in phase 1 of development 
 
 
 ## Roadmap
