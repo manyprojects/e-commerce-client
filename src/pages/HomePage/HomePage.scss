@@ -12,7 +12,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
+        justify-content: center;
         gap: 2rem;
         padding: 0 $mobile-padding 0 $mobile-padding;
         min-width: $min-width;
