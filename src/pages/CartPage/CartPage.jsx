@@ -1,10 +1,13 @@
 import CartCard from '../../components/CartCard/CartCard';
 import axios from 'axios';
 import './CartPage.scss';
+import { useState } from 'react';
 
 const CartPage = ({ cartItems, deletFromCart, stripeProducts }) => {
 
     const SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
+    const [ response, setResponse ] = useState("");
 
     const subTotal = cartItems.reduce((sum, item) => (
         sum + parseFloat(item.price)), 0)
@@ -36,7 +39,20 @@ const CartPage = ({ cartItems, deletFromCart, stripeProducts }) => {
         } catch (error) {
           console.error('Error during checkout:', error);
         }
-      };
+    };
+
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+
+      try {
+        const data = {"user-question": event.target[0].value, "cart-items": [...cartItems]};
+        const resp = await axios.post(`${SERVER_URL}/completions`, data);
+        setResponse(resp.data.choices[0].text);
+
+      } catch (error) {
+        return (<p>{`CartPage: ${error.message}`} </p>);
+      }
+    }
 
     return (
         <div className='cart-page'>
@@ -67,6 +83,14 @@ const CartPage = ({ cartItems, deletFromCart, stripeProducts }) => {
                     <p>{`$${subTotal}`}</p>
                     <hr className='cart__divider' />
                     <button onClick={checkout} className='cart__btn'>Proceed to checkout</button>
+
+                    <form className='cart__form' onSubmit={handleSubmit}>
+                      <textarea className='cart__input'/>
+                      <br />
+                      <button type='submit' className='cart__btn'>Ask ChatGPT</button>
+                    </form>
+                    <br />
+                    {response ? <div className='cart__response'>{response}</div> : <div></div>}
                 </section>
             </div>
         </div>

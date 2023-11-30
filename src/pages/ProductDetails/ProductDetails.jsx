@@ -15,7 +15,7 @@ const ProductDetails = ({ addToCart }) => {
                 .get(`${SERVER_URL}/products/${id}`);
                 setProductDetails(productDetails.data[0]);
             } catch(err) {
-                return (<p>{`HomePage: ${err.message}`} </p>);
+                return (<p>{`ProductDetails: ${err.message}`} </p>);
             }
         }
         fetchProductDetails();
