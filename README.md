@@ -2,7 +2,7 @@
 
 ## Overview
 
-E-COMMERCE is a dynamic, responsive, and AI powered e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience with ChatGPT experience.
+E-COMMERCE is a dynamic, responsive, and AI powered e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience.
 
 ## Project Screenshots
 ![Screenshot 1](./screenshots/localhost_3000_2.png)
