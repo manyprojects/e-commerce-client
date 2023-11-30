@@ -2,23 +2,24 @@
 
 ## Overview
 
-E-COMMERCE is a dynamic, responsive e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience.
+E-COMMERCE is a dynamic, responsive, and AI powered e-commerce website built on React in the font end and Express in the back end. This website offers users a modern online shopping experience with ChatGPT experience.
 
 ## Project Screenshots
 ![Screenshot 1](./screenshots/localhost_3000_2.png)
 
-![Screenshot 1](./screenshots/localhost_3000_.png)
+![Screenshot 2](./screenshots/localhost_3000_.png)
 
-![Screenshot 1](./screenshots/localhost_3000_3.png)
+![Screenshot 3](./screenshots/localhost_3000_cart.png)
 
-![Screenshot 1](./screenshots/localhost_3000_4.png)
+![Screenshot 4](./screenshots/localhost_3000_4.png)
 
-![Screenshot 1](./screenshots/checkout.stripe.com_c_pay_cs_test_b1Iy4k7jcPycSwshrdAuQOc6UwZsnGbcOQThFQhuTkC45Ol0zDDcI6VdTI.png)
+![Screenshot 5](./screenshots/checkout.stripe.com_c_pay_cs_test_b1Iy4k7jcPycSwshrdAuQOc6UwZsnGbcOQThFQhuTkC45Ol0zDDcI6VdTI.png)
 
 ### Problem
 
-This site is created for my personal use in phase one. In phase two, when more features are added, this site will allow users to see product recommendations and more functionalities to allow users to navigate the web content because 
-many users currently face challenges when shopping online such as a lack of personalized recommendations, and difficulty navigating through extensive product catalogs. In phase three, the site should allow users to sell products by enabling sell features.
+This site is created for my personal use in phase one. In phase two, when more features are added, this site will allow users to see product wirh AI recommendations and more functionalities to allow users to navigate the web content because 
+
+Many users currently face challenges when shopping online such as a lack of personalized recommendations, and difficulty navigating through extensive product catalogs. In phase three, the site should allow users to sell products by enabling sell features and user profile page.
 
 ### User Profile
 
@@ -106,11 +107,5 @@ Local/section storage and token authentication will be implemented in phase 1 of
 6. Implement basic features for client pages 
 7. Styling
 
-## Nice-to-haves
-
-Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
-
-- Use ChatGPT APIs
-- complete version of user auth
 
 
