@@ -3,7 +3,7 @@ import './Success.scss'
 const Success = () => {
     return (
         <div className='success'>
-            Thank you for shooping with us!
+            Thank you for shoopping with us!
         </div>
     );
 };
