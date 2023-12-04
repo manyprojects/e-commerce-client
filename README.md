@@ -107,5 +107,18 @@ Local/section storage and JWT token authentication will be implemented in phase 
 6. Implement basic features for client pages 
 7. Styling
 
+## Installation
+git clone git@github.com:manyprojects/e-commerce-client.git
+this project requires server api to run:
+git clone git@github.com:manyprojects/e-commerce-server.git
+
+### Change into the project directory
+cd to the corresponding client and server directory
+
+### Install dependencies
+npm i axios dotenv react-router-dom react-dom sass
+
+### Start the development
+npm start
 
 
