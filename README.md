@@ -109,7 +109,9 @@ Local/section storage and JWT token authentication will be implemented in phase 
 
 ## Installation
 git clone git@github.com:manyprojects/e-commerce-client.git
+
 this project requires server api to run:
+
 git clone git@github.com:manyprojects/e-commerce-server.git
 
 ### Change into the project directory
