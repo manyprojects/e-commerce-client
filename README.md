@@ -17,9 +17,9 @@ E-COMMERCE is a responsive, and AI-powered e-commerce website built on React in 
 
 ### Problem
 
-This site is created for my personal use in phase one. In phase two, when more features are added, this site will allow users to see product wirh AI recommendations and more functionalities to allow users to navigate the web content because: 
+This site was created for my personal use in phase one. In phase two, when more features are added, this site will allow users to see products with AI recommendations and more functionalities to allow users to navigate the web content because: 
 
-many users currently face challenges when shopping online such as a lack of personalized recommendations, and difficulty navigating through extensive product catalogs. In phase three, the site should allow users to sell products by enabling sell features and user profile page.
+many users currently face challenges when shopping online such as a lack of personalized recommendations, and difficulty navigating through extensive product catalogs. In phase three, the site should allow users to sell products by enabling sell features and a user profile page.
 
 ### User Profile
 
@@ -31,7 +31,7 @@ Users can go to the website, browse the website, and select the items that they 
 
 ### Features
 
-1. User registration: new users can create an account by providing a username,email, and password
+1. User registration: new users can create an account by providing a username, email, and password
 
 2. User auth: registered users can log in to their accounts with JWT authentication
 
@@ -41,11 +41,11 @@ Users can go to the website, browse the website, and select the items that they 
 
 5. Shopping cart: users can add products to the shopping cart for checkout
 
-6. Payment: users can checkout their products by entering payment methods
+6. Payment: users can check out their products by entering payment methods
 
 7. Responsive design: the website works from between different devices providing a seamless user experience
 
-8. Product recommendation: recommend products to registered user (will be added in development phase 2)
+8. Product recommendation: recommend products to registered users (will be added in development phase 2)
 
 9. Website summary: providing a summary to users with website products, reviews, ratings, etc (will be added in development phase 2).
 
@@ -92,7 +92,7 @@ MySQL database
 
 ### Auth
 
-Auth in the first phase should be just a simple check when a user creates an account. It will check if users enter all required fields.
+Auth in the first phase should be only a simple check when a user creates an account. It will check if users enter all required fields.
 
 Local/section storage and JWT token authentication will be implemented in phase 1 of development 
 
@@ -110,7 +110,7 @@ Local/section storage and JWT token authentication will be implemented in phase 
 ## Installation
 git clone git@github.com:manyprojects/e-commerce-client.git
 
-this project requires server api to run:
+this project requires server API to run:
 
 git clone git@github.com:manyprojects/e-commerce-server.git
 
