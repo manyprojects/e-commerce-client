@@ -9,11 +9,13 @@ E-COMMERCE is a responsive, and AI-powered e-commerce website built on React in 
 
 ![Screenshot 2](./screenshots/localhost_3000_.png)
 
-![Screenshot 3](./screenshots/localhost_3000_cart.png)
+![Screenshot 3](./screenshots/localhost_3000_4.png)
 
-![Screenshot 4](./screenshots/localhost_3000_4.png)
+![Screenshot 4](./screenshots/localhost_3000_cart.png)
 
-![Screenshot 5](./screenshots/checkout.stripe.com_c_pay_cs_test_b1Iy4k7jcPycSwshrdAuQOc6UwZsnGbcOQThFQhuTkC45Ol0zDDcI6VdTI.png)
+![Screenshot 5](./screenshots/localhost_3000_cart-2.png)
+
+![Screenshot 6](./screenshots/checkout.stripe.com_c_pay_cs_test_b1Iy4k7jcPycSwshrdAuQOc6UwZsnGbcOQThFQhuTkC45Ol0zDDcI6VdTI.png)
 
 ### Problem
 
